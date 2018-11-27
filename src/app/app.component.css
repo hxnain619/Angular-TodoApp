@@ -1,0 +1,144 @@
+.container {
+    display: grid;
+    grid-template-columns: 50% auto;
+}
+
+.col {
+    padding: .4em 1.3em;
+}
+
+.color-dark {
+    padding: 5px;
+    padding-left: 20px;
+    background: rgb(1, 121, 168);
+    color: white;
+    border-top-left-radius: 40px;
+}
+
+.color-light {
+    background: rgb(4, 166, 216);
+    padding: 2%;
+    padding-left: 1%;
+    border-bottom-right-radius: 40px;
+}
+
+.sm {
+    margin-top: 5px;
+    padding-bottom: 1em;
+    
+}
+
+#txt {
+    border: 0;
+    padding: 1.2em;
+    width : 80%;
+    margin-bottom: 2em;
+    background: white;
+    color: #0b485e;	
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: .85em;
+    font-family: cursive !important;
+    
+}
+
+#txt:focus-within {
+    outline: none;
+
+}
+
+input.btn {
+    border: 0;
+    display: block;
+    padding: 1em 3em;
+    background-color: rgb(1, 121, 168);
+    color: white;
+    font-size : 13px;
+    margin-bottom: 1em;
+    cursor: pointer;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-family: cursive !important;
+}
+
+input.btn:hover,.life-container:hover{
+    
+    outline: none;
+    background: rgb(255, 255, 255);
+    color: black;
+    -webkit-transition:background 0.3s ease-in-out;
+    -moz-transition:background 0.3s ease-in-out;
+    transition:background-color 0.3s ease-in-out,color 0.3s ease-in-out;
+}
+input.btn:active,.life-container:active,input.btn:focus,.life-container:focus {
+    outline: none;
+}
+
+.life-container {
+    
+
+    background:  rgb(1, 121, 168);
+    padding: .9em;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
+}
+
+
+.crossIcon {
+
+    transform: rotate(45deg);
+    height: auto;
+    width: 2.4em;
+    float: right;
+    background: transparent;
+    
+}
+.crossIcon:hover {
+    height: auto;
+    width: 2.6em;
+    -webkit-transition:width 0.3s ease-in-out,height 0.3s ease-in-out;
+    -moz-transition:width 0.3s ease-in-out,height 0.3s ease-in-out;
+    transition:width 0.3s ease-in-out,height 0.3s ease-in-out;
+}
+.add{
+    animation: add 0.6s linear 1;
+}
+@keyframes add {
+    
+    from{
+        opacity: 0.4;
+        transform: translateY(40px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes remove {
+
+    to{ transform: translateX(5%); opacity: .4;}
+
+}
+
+@keyframes fadeOut {
+    
+    to {transform: translateX(140%); opacity: 0 }
+        
+}
+
+@keyframes show {
+    
+    from { transform: translateX(-100%); opacity: 0}
+
+    to { transform: translateX(0); opacity: 1;}
+
+}

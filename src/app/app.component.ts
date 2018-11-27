@@ -6,5 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'AngularTodoApp';
+  private todoText : String;
+  public todoList = [];
+
+  constructor() {
+    this.todoText = '';
+  }
+  private addItem() : void {
+    this.todoList.push(this.todoText);
+    this.todoText=''
+
+  }
+  private DeleteTask(index) :void {
+      this.todoList.splice(index,1);
+  }
+
 }
